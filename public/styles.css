@@ -276,7 +276,7 @@ input:checked + .slider:before {
         background: url("../images/bg-top.svg"), url("./images/bg-bottom.svg");
         background-repeat: no-repeat;
         background-position-x: right, left;
-        background-position-y: top, 28rem;
+        background-position-y: top, 32rem;
     }
 
     .card-div{
