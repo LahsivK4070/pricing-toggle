@@ -1,0 +1,309 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    background: url("../images/bg-top.svg");
+    background-color: hsl(240, 78%, 98%);
+    background-repeat: no-repeat;
+    background-size: 25rem;
+    background-position-x: 10rem;
+    background-position-y: -2rem;
+    background-attachment: fixed;
+    padding: 3rem 1rem;
+}
+
+/* header */
+
+header{
+    margin-bottom: 1rem;
+}
+
+header h1{
+    color: hsl(233, 13%, 49%);
+    margin-bottom: 2rem;
+}
+
+header .toggle-area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.toggle-area p{
+    color: hsl(234, 14%, 74%);
+    font-weight: 700;
+}
+
+.header-p1{
+    padding-right: 1rem;
+}
+
+.header-p2{
+    padding-left: 1rem;
+}
+
+.toggle-area .switch{
+    position: relative;
+    width: 4rem;
+    height: 2rem;
+}
+
+.toggle-area .switch input{
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.toggle-area .slider{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 3px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+}
+  
+.slider.round {
+    border-radius: 60px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Basic Card */
+
+.basic, .master{
+    overflow: hidden;
+    background-color: white;
+    max-width: 18rem;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px hsl(234, 14%, 74%);
+}
+
+.basic p, .master p{
+    font-weight: 700;
+    color: hsl(233, 13%, 49%);
+    margin-bottom: 1.5rem;
+}
+
+.basic h2, .master h2{
+    font-size: 2rem;
+    color: hsl(232, 13%, 33%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.basic h2 span, .master h2 span{
+    font-size: 4rem;
+    padding-left: 0.5rem;
+}
+
+.basic hr, .master hr{
+    border-left: none;
+    border-bottom: none;
+    border-color: hsl(240, 78%, 98%);
+    border-width: 1px;
+}
+
+.basic ul, .master ul{
+    list-style: none;
+}
+
+.basic li, .master li{
+    font-weight: 700;
+    color: hsl(233, 13%, 49%);
+    padding: 1rem;
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+
+.basic button, .master button{
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5rem;
+    background: linear-gradient(90deg, hsl(236, 72%, 79%), 40%, hsl(237, 63%, 64%));
+    padding: 1rem 3rem;
+    border: 1px solid hsl(236, 72%, 79%);
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-radius: 10px;
+}
+
+.basic button:hover, .master button:hover{
+    color: hsl(236, 72%, 79%);
+    background: white;
+}
+
+/* Professional Card */
+
+.pro{
+    overflow: hidden;
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    max-width: 18rem;
+    margin: 2rem auto 0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px hsl(234, 14%, 74%);
+}
+
+.pro p{
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.pro h2{
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.pro h2 span{
+    font-size: 4rem;
+    padding-left: 0.5rem;
+}
+
+.pro hr{
+    border-left: none;
+    border-top: none;
+    border-color: white;
+    border-width: 1px;
+}
+
+.pro ul{
+    list-style: none;
+}
+
+.pro li{
+    font-weight: 700;
+    color: white;
+    padding: 1rem;
+    border-bottom: 1px solid white;
+}
+
+.pro button{
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 1.5rem;
+    background-color: white;
+    padding: 1rem 3rem;
+    border: 1px solid white;
+    width: 100%;
+    color: hsl(236, 72%, 79%);
+    font-weight: 700;
+    letter-spacing: 3px;
+    border-radius: 10px;
+}
+
+.pro button:hover{
+    background: hsl(237, 63%, 64%);
+    color: white;
+}
+
+/* Responsive */
+
+@media (min-width: 478px) {
+    
+    .basic, .pro, .master{
+        max-width: 20rem;
+    }
+
+    body{
+        background-position-x: 18rem;
+    }
+}
+
+@media (min-width: 600px) {
+    
+    body{
+        background-position-x: 26rem;
+    }
+}
+
+@media (min-width: 730px) {
+    
+    body{
+        background-position-x: 34rem;
+    }
+}
+
+@media (min-width: 840px) {
+    
+    body{
+        background-position-x: 42rem;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    body{
+        background: url("../images/bg-top.svg"), url("./images/bg-bottom.svg");
+        background-repeat: no-repeat;
+        background-position-x: right, left;
+        background-position-y: top, 28rem;
+    }
+
+    .card-div{
+        position: relative;
+        max-width: 60rem;
+        margin: auto;
+    }
+
+    .basic, .pro, .master{
+        position: absolute;
+        min-width: 20rem;
+    }
+
+    .basic{
+        left: 1rem;
+        top: 1rem;
+    }
+
+    .pro{
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+        padding: 3rem;
+    }
+
+    .master{
+        left: 39rem;
+        top: 1rem;
+    }
+}
